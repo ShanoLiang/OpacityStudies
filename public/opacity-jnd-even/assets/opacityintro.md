@@ -6,7 +6,7 @@ In this part, you will be shown a series of two area charts, and you will be ask
 
 ### Some judgement pairs may be difficult to distinguish -- for these, please try your best!
 
-This part contains 47-48 components. It will take approximately 10-15 minutes to finish this part. 
+This part contains 96 components. It will take approximately 25-30 minutes to finish this part. 
 
 We suggest maximizing your browser window, as some charts can be on the larger side.
 
