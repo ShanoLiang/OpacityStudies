@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.1.1/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "opacity-jnd-single",
+    "opacity-jnd-even",
     "tutorial",
     "example-brush-interactions",
     "example-cleveland",
@@ -36,8 +36,8 @@
     "test-step-logic"
   ],
   "configs": {
-    "opacity-jnd-single": {
-      "path": "opacity-jnd-single/config.json"
+    "opacity-jnd-even": {
+      "path": "opacity-jnd-even/config.json"
     },
     "tutorial": {
       "path": "tutorial/config.json"
