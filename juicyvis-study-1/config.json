@@ -1,0 +1,2034 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.1.1/src/parser/StudyConfigSchema.json",
+  "components": {
+    "introduction": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/introduction.md",
+      "response": [
+        {
+          "id": "prolificId",
+          "prompt": "Before we move on, please enter your Prolific ID first",
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Prolific ID",
+          "paramCapture": "PROLIFIC_PID"
+        }
+      ],
+      "type": "markdown"
+    },
+    "Consent Form": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/consent.md",
+      "nextButtonText": "Agree",
+      "response": [
+        {
+          "id": "signature",
+          "location": "belowStimulus",
+          "placeholder": "Please provide your signature",
+          "prompt": "Your signature (It can be your preferred name)",
+          "required": true,
+          "type": "shortText"
+        },
+        {
+          "id": "accept",
+          "location": "belowStimulus",
+          "options": [
+            "Decline",
+            "Accept"
+          ],
+          "prompt": "Do you consent to the study and wish to continue?",
+          "required": true,
+          "requiredValue": "Accept",
+          "type": "radio"
+        }
+      ],
+      "type": "markdown"
+    },
+    "Attention Check A": {
+      "correctAnswer": [        
+        {
+          "answer": "Disagree",
+          "id": "attentionchecka"
+        }
+      ],
+      "path": "juicyvis-study-1/assets/attentioncheck-a.md",
+      "response": [
+        {
+          "id": "attentionchecka",
+          "prompt": "",
+          "location": "belowStimulus",
+          "required": true,
+          "options": [
+            "Strongly Agree",
+            "Agree",
+            "Neutral",
+            "Disagree",
+            "Strongly Disagree"
+          ],
+          "type": "radio"
+        }
+      ],
+      "type": "markdown"
+    },
+    "Disqualification_a": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/disqualification-a.md",
+      "nextButtonText":"Disqualified",
+      "response": [
+        {
+          "hidden": true,
+          "id": "disqualification-a",
+          "prompt":"You have been disqualified from this study.",
+          "required": true,
+          "type": "shortText"
+        }
+      ],
+      "type": "markdown"
+    },
+    "Audio Speaker Test": {
+      "instruction": "Please click the **[Play Speaker Test Audio]** button in the right center of the screen to listen to which numbers the audio said. It should have 4 numbers, and below you need to select the correct 4 numbers you heard from the audio. We suggest that you play the audio several times to make sure you hear the numbers.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=0&juicy=0",
+      "response": [
+        {
+          "id": "quiz2",
+          "prompt": "Please select the correct numbers you heard",
+          "withDivider": true,
+          "required": true,
+          "location": "sidebar",
+          "type": "radio",
+          "options": [
+            "3179",
+            "3497",
+            "3879",
+            "3197"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "quiz2",
+          "answer": "3179"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "Disqualification_b": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/disqualification-b.md",
+      "nextButtonText":"Disqualified",
+      "response": [
+        {
+          "hidden": true,
+          "id": "disqualification-b",
+          "prompt":"You have been disqualified from this study.",
+          "required": true,
+          "type": "shortText"
+        }
+      ],
+      "type": "markdown"
+    },
+    "Color Blindness Test": {
+      "instruction": "What number do you see in this image?",
+      "path": "juicyvis-study-1/assets/Ishihara9.png",
+      "nextButtonLocation": "sidebar",
+      "response": [
+        {
+          "id": "colorblindness-test",
+          "location": "sidebar",
+          "prompt": "Enter the number you see:",
+          "required": true,
+          "type": "numerical",
+          "withDontKnow": true
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "colorblindness-test",
+          "answer": 45
+        }
+      ],
+      "style": {
+        "width": "300px"
+      },
+      "type": "image"
+    },
+    "Disqualification_c": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/disqualification-c.md",
+      "nextButtonText":"Disqualified",
+      "response": [
+        {
+          "hidden": true,
+          "id": "disqualification-c",
+          "prompt":"You have been disqualified from this study.",
+          "required": true,
+          "type": "shortText"
+        }
+      ],
+      "type": "markdown"
+    },
+    "JuicyCharts Intro": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/juicycharts-intro.md",
+      "response": [],
+      "type": "markdown"
+    },
+    "JuicyChart_end": {
+      "correctAnswer": [
+        {
+          "answer": "Yes",
+          "id": "juicychart_end"
+        }
+      ],
+      "path": "juicyvis-study-1/assets/juicychart_end.md",
+      "response": [
+        {
+          "id": "juicychart_end",
+          "prompt": "Please click this button [Yes] to continue.",
+          "location": "belowStimulus",
+          "required": true,
+          "options": ["Yes"],
+          "type": "buttons"
+        }
+      ],
+      "type": "markdown"
+    },
+    "JuicyChart_1_0": {
+      "instruction": "**[Infographic Name]: AI System** \n\n **[Instruction]**: After you click to select a point, a details box appears, and you'll see it is selected and listed on the right. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=1&juicy=0",
+      "response": [
+        {
+          "id": "chart1_0_Q1",
+          "prompt": "Click the leftmost point on the chart (the point closest to the left edge). What is its Affiliation?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Academia",
+            "Academia and industry collaboration",
+            "Industry",
+            "Not specified",
+            "Other"
+          ]
+        },
+        {
+          "id": "chart1_0_Q2",
+          "prompt": "Still on the leftmost point, what is its Parameters value shown in the details box?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "10",
+            "40",
+            "80",
+            "100",
+            "120"
+          ]
+        },
+        {
+          "id": "chart1_0_Q3",
+          "prompt": "Click the lowest point of **[Not specified]** affiliation (the yellow points) on the chart. What is its name?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Theseus",
+            "Variational",
+            "Bankruptcy-NN",
+            "Samuel Neural Checkers",
+            "GNN"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart1_0_Q1",
+          "answer": "Industry"
+        },
+        {
+          "id": "chart1_0_Q2",
+          "answer": "40"
+        },
+        {
+          "id": "chart1_0_Q3",
+          "answer": "Bankruptcy-NN"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_1_1": {
+      "instruction": "**[Infographic Name]: AI System** \n\n **[Instruction]**: After you click to select a point, a details box appears, and you'll see it is selected and listed on the right. \n\n Please **TRY YOUR BEST** to find the answers from the infographic. ",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=1&juicy=1",
+      "response": [
+        {
+          "id": "chart1_1_Q1",
+          "prompt": "Click the leftmost point on the chart (the point closest to the left edge). What is its Affiliation?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Academia",
+            "Academia and industry collaboration",
+            "Industry",
+            "Not specified",
+            "Other"
+          ]
+        },
+        {
+          "id": "chart1_1_Q2",
+          "prompt": "Still on the leftmost point, what is its Parameters value shown in the details box?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "10",
+            "40",
+            "80",
+            "100",
+            "120"
+          ]
+        },
+        {
+          "id": "chart1_1_Q3",
+          "prompt": "Click the lowest point of **[Not specified]** affiliation (the yellow points) on the chart. What is its name?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Theseus",
+            "Variational",
+            "Bankruptcy-NN",
+            "Samuel Neural Checkers",
+            "GNN"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart1_1_Q1",
+          "answer": "Industry"
+        },
+        {
+          "id": "chart1_1_Q2",
+          "answer": "40"
+        },
+        {
+          "id": "chart1_1_Q3",
+          "answer": "Bankruptcy-NN"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_2_0": {
+      "instruction": "**[Infographic Name]: The Map** \n\n **[Instruction]**: Drag to pan the map, and scroll to zoom in or out. Click a country to select it. You can select multiple countries to compare their values. Click “Clear selection” to remove all selected countries. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=2&juicy=0",
+      "response": [
+        {
+          "id": "chart2_0_Q1",
+          "prompt": "Find and click **Mexico**. What value is shown for Mexico?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "0.47",
+            "1.25",
+            "1.73",
+            "2.42",
+            "3.16"
+          ]
+        },
+        {
+          "id": "chart2_0_Q2",
+          "prompt": "Find and click **India**. What value is shown for India?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "0.74",
+            "1.31",
+            "1.98",
+            "2.77",
+            "2.56"
+          ]
+        },
+        {
+          "id": "chart2_0_Q3",
+          "prompt": "Find and click **Germany** (it should be under Norway). What value is shown for Germany?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "0.37",
+            "0.45",
+            "1.18",
+            "2.21",
+            "3.38"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart2_0_Q1",
+          "answer": "1.25"
+        },
+        {
+          "id": "chart2_0_Q2",
+          "answer": "2.77"
+        },
+        {
+          "id": "chart2_0_Q3",
+          "answer": "0.37"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_2_1": {
+      "instruction": "**[Infographic Name]: The Map** \n\n **[Instruction]**: Drag to pan the map, and scroll to zoom in or out. Click a country to select it. You can select multiple countries to compare their values. Click “Clear selection” to remove all selected countries. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=2&juicy=1",
+      "response": [
+        {
+          "id": "chart2_1_Q1",
+          "prompt": "Find and click **Mexico**. What value is shown for Mexico?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "0.47",
+            "1.25",
+            "1.73",
+            "2.42",
+            "3.16"
+          ]
+        },
+        {
+          "id": "chart2_1_Q2",
+          "prompt": "Find and click **India**. What value is shown for India?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "0.74",
+            "1.31",
+            "1.98",
+            "2.77",
+            "2.56"
+          ]
+        },
+        {
+          "id": "chart2_1_Q3",
+          "prompt": "Find and click **Germany** (it should be under Norway). What value is shown for Germany?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "0.37",
+            "0.45",
+            "1.18",
+            "2.21",
+            "3.38"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart2_1_Q1",
+          "answer": "1.25"
+        },
+        {
+          "id": "chart2_1_Q2",
+          "answer": "2.77"
+        },
+        {
+          "id": "chart2_1_Q3",
+          "answer": "0.37"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_3_0": {
+      "instruction": "**[Infographic Name]: Energy** \n\n **[Instruction]**: Select one energy source type button below, then drag the slider (at bottom-right) to reorder countries from High to Low or from Low to High. You can hover over a country's bar to see its value. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=3&juicy=0",
+      "response": [
+        {
+          "id": "chart3_0_Q1",
+          "prompt": "Which country is ranked 4th highest for the **Hydropower** energy source type?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "France",
+            "Canada",
+            "Brazil",
+            "Sweden",
+            "Russia"
+          ]
+        },
+        {
+          "id": "chart3_0_Q2",
+          "prompt": "Which country is ranked 5th highest for the **Oil** energy source type?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Norway",
+            "Australia",
+            "Netherlands",
+            "Spain",
+            "United States"
+          ]
+        },
+        {
+          "id": "chart3_0_Q3",
+          "prompt": "Which country is ranked 3th highes for the **Solar** energy source type?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Spain",
+            "Japan",
+            "Netherlands",
+            "Australia",
+            "United States"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart3_0_Q1",
+          "answer": "Brazil"
+        },
+        {
+          "id": "chart3_0_Q2",
+          "answer": "Australia"
+        },
+        {
+          "id": "chart3_0_Q3",
+          "answer": "Spain"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_3_1": {
+      "instruction": "**[Infographic Name]: Energy** \n\n**[Instruction]**: Select one energy source type button below, then drag the slider (at bottom-right) to reorder countries from High to Low or from Low to High. You can hover over a country's bar to see its value. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=3&juicy=1",
+      "response": [
+        {
+          "id": "chart3_1_Q1",
+          "prompt": "Which country is ranked 4th highest for the **Hydropower** energy source type?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "France",
+            "Canada",
+            "Brazil",
+            "Sweden",
+            "Russia"
+          ]
+        },
+        {
+          "id": "chart3_1_Q2",
+          "prompt": "Which country is ranked 5th highest for the **Oil** energy source type?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Norway",
+            "Australia",
+            "Netherlands",
+            "Spain",
+            "United States"
+          ]
+        },
+        {
+          "id": "chart3_1_Q3",
+          "prompt": "Which country is ranked 3th highes for the **Solar** energy source type?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Spain",
+            "Japan",
+            "Netherlands",
+            "Australia",
+            "United States"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart3_1_Q1",
+          "answer": "Brazil"
+        },
+        {
+          "id": "chart3_1_Q2",
+          "answer": "Australia"
+        },
+        {
+          "id": "chart3_1_Q3",
+          "answer": "Spain"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_4_0": {
+      "instruction": "**[Infographic Name]: Foods** \n\n **[Instruction]**: Select a year in the first page's chart (it shows **Currently Selected: [YEAR]**), then use the bottom slider or mouse wheel to switch between different infographics of your selected year. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=4&juicy=0",
+      "response": [
+        {
+          "id": "chart4_0_Q1",
+          "prompt": "Click the year 2020 and switch to different infographics. What value is shown for the **Fish & Seafood** segment in China?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "20.5kg",
+            "22.2kg",
+            "23.6kg",
+            "32.9kg",
+            "41.1kg"
+          ]
+        },
+        {
+          "id": "chart4_0_Q2",
+          "prompt": "In the year 2020, which country had the highest **Poultry** share (**%**) of its country's total meat & fish consumption?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Brazil",
+            "United States",
+            "Argentina",
+            "Canada",
+            "China"
+          ]
+        },
+        {
+          "id": "chart4_0_Q3",
+          "prompt": "Go back to re-select a different year. What is the **total value** shown at the end of the bar for Japan in the year 2017?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "110kg",
+            "101kg",
+            "96.1kg",
+            "94.1kg",
+            "141kg"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart4_0_Q1",
+          "answer": "41.1kg"
+        },
+        {
+          "id": "chart4_0_Q2",
+          "answer": "Brazil"
+        },
+        {
+          "id": "chart4_0_Q3",
+          "answer": "96.1kg"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_4_1": {
+      "instruction": "**[Infographic Name]: Foods** \n\n**[Instruction]**: Select a year in the first page's chart (it shows **Currently Selected: [YEAR]**), then use the bottom slider or mouse wheel to switch between different infographics of your selected year. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=4&juicy=1",
+      "response": [
+        {
+          "id": "chart4_1_Q1",
+          "prompt": "Click the year 2020 and switch to different infographics. What value is shown for the **Fish & Seafood** segment in China?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "20.5kg",
+            "22.2kg",
+            "23.6kg",
+            "32.9kg",
+            "41.1kg"
+          ]
+        },
+        {
+          "id": "chart4_1_Q2",
+          "prompt": "In the year 2020, which country had the highest **Poultry** share (**%**) of its country's total meat & fish consumption?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Brazil",
+            "United States",
+            "Argentina",
+            "Canada",
+            "China"
+          ]
+        },
+        {
+          "id": "chart4_1_Q3",
+          "prompt": "Go back to re-select a different year. What is the **total value** shown at the end of the bar for Japan in the year 2017?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "110kg",
+            "101kg",
+            "96.1kg",
+            "94.1kg",
+            "141kg"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart4_1_Q1",
+          "answer": "41.1kg"
+        },
+        {
+          "id": "chart4_1_Q2",
+          "answer": "Brazil"
+        },
+        {
+          "id": "chart4_1_Q3",
+          "answer": "96.1kg"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_5_0": {
+      "instruction": "**[Infographic Name]: People** \n\n **[Instruction]**: Left-click a rectangle to drill in. Right-click to go back. Hover to see the tooltip number. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=5&juicy=0",
+      "response": [
+        {
+          "id": "chart5_0_Q1",
+          "prompt": "Left-click to enter the infographic of Years. Find the year 2019. What population is shown?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "6.17B",
+            "7.33B",
+            "7.81B",
+            "8.09B",
+            "7.29B"
+          ]
+        },
+        {
+          "id": "chart5_0_Q2",
+          "prompt": "How many people aged 25-64 were there in **China** in 2019?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "811.7M",
+            "827.7M",
+            "541.1M",
+            "424.1M",
+            "171.7M"
+          ]
+        },
+        {
+          "id": "chart5_0_Q3",
+          "prompt": "Which age groups of **Mexico** in the year 2015 has largest population?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Ages 65+",
+            "Ages 25-64",
+            "Ages Under 25",
+            "Ages 15-24",
+            "Ages 5-14"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart5_0_Q1",
+          "answer": "7.81B"
+        },
+        {
+          "id": "chart5_0_Q2",
+          "answer": "827.7M"
+        },
+        {
+          "id": "chart5_0_Q3",
+          "answer": "Ages 25-64"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_5_1": {
+      "instruction": "**[Infographic Name]: People** \n\n **[Instruction]**: Left-click a rectangle to drill in. Right-click to go back. Hover to see the tooltip number. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=5&juicy=1",
+      "response": [
+        {
+          "id": "chart5_1_Q1",
+          "prompt": "Left-click to enter the infographic of Years. Find the year 2019. What population is shown?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "6.17B",
+            "7.33B",
+            "7.81B",
+            "8.09B",
+            "7.29B"
+          ]
+        },
+        {
+          "id": "chart5_1_Q2",
+          "prompt": "How many people aged 25-64 were there in **China** in 2019?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "811.7M",
+            "827.7M",
+            "541.1M",
+            "424.1M",
+            "171.7M"
+          ]
+        },
+        {
+          "id": "chart5_1_Q3",
+          "prompt": "Which age groups of **Mexico** in the year 2015 has largest population?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Ages 65+",
+            "Ages 25-64",
+            "Ages Under 25",
+            "Ages 15-24",
+            "Ages 5-14"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart5_1_Q1",
+          "answer": "7.81B"
+        },
+        {
+          "id": "chart5_1_Q2",
+          "answer": "827.7M"
+        },
+        {
+          "id": "chart5_1_Q3",
+          "answer": "Ages 25-64"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_6_0": {
+      "instruction": "**[Infographic Name]: Income** \n\n **[Instruction]**: Use the controls on the right to filter (**Focus Year**, **Gini min/max**, **Regions**). Hover a line to see a country tooltip. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=6&juicy=0",
+      "response": [
+        {
+          "id": "chart6_0_Q1",
+          "prompt": "In the year 1993, how many countries had a Gini index above 0.43?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "16",
+            "14",
+            "12",
+            "10",
+            "8"
+          ]
+        },
+        {
+          "id": "chart6_0_Q2",
+          "prompt": "In the year 2008, which country in South America had the lowest Gini index?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Colombia",
+            "Brazil",
+            "Paraguay",
+            "Peru",
+            "Uruguay"
+          ]
+        },
+        {
+          "id": "chart6_0_Q3",
+          "prompt": "In the year 2015, how many countries in North America had a Gini index below 0.47?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "7",
+            "6",
+            "5",
+            "4",
+            "3"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart6_0_Q1",
+          "answer": "12"
+        },
+        {
+          "id": "chart6_0_Q2",
+          "answer": "Uruguay"
+        },
+        {
+          "id": "chart6_0_Q3",
+          "answer": "4"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_6_1": {
+      "instruction": "**[Infographic Name]: Income** \n\n **[Instruction]**: Use the controls on the right to filter (**Focus Year**, **Gini min/max**, **Regions**). Hover a line to see a country tooltip. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=6&juicy=1",
+      "response": [
+        {
+          "id": "chart6_1_Q1",
+          "prompt": "In the year 1993, how many countries had a Gini index above 0.43?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "16",
+            "14",
+            "12",
+            "10",
+            "8"
+          ]
+        },
+        {
+          "id": "chart6_1_Q2",
+          "prompt": "In the year 2008, which country in South America had the lowest Gini index?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Colombia",
+            "Brazil",
+            "Paraguay",
+            "Peru",
+            "Uruguay"
+          ]
+        },
+        {
+          "id": "chart6_1_Q3",
+          "prompt": "In the year 2015, how many countries in North America had a Gini index below 0.47?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "7",
+            "6",
+            "5",
+            "4",
+            "3"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart6_1_Q1",
+          "answer": "12"
+        },
+        {
+          "id": "chart6_1_Q2",
+          "answer": "Uruguay"
+        },
+        {
+          "id": "chart6_1_Q3",
+          "answer": "4"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_7_0": {
+      "instruction": "**[Infographic Name]: Internet** \n\n **[Instruction]**: Use the **Focus Year** slider to set the year. Click a dot or line to select a country, and the bottom-right will show the related countries to the selected country. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=7&juicy=0",
+      "response": [
+        {
+          "id": "chart7_0_Q1",
+          "prompt": "Which country had the highest % of internet use in 2005?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "United States",
+            "Canada",
+            "United Kingdom",
+            "Denmark",
+            "Iceland"
+          ]
+        },
+        {
+          "id": "chart7_0_Q2",
+          "prompt": "Which country had the highest % of internet use in 2000?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Iceland",
+            "Denmark",
+            "Norway",
+            "Canada",
+            "United States"
+          ]
+        },
+        {
+          "id": "chart7_0_Q3",
+          "prompt": "What were the three top related countries to Iceland in 2009?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Norway, Luxembourg, Denmark",
+            "Norway, Netherlands, Denmark",
+            "Norway, Sweden, Netherlands",
+            "Sweden, Netherlands, Denmark",
+            "Luxembourg, Denmark, United Kingdom"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart7_0_Q1",
+          "answer": "Iceland"
+        },
+        {
+          "id": "chart7_0_Q2",
+          "answer": "Norway"
+        },
+        {
+          "id": "chart7_0_Q3",
+          "answer": "Norway, Sweden, Netherlands"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "JuicyChart_7_1": {
+      "instruction": "**[Infographic Name]: Internet** \n\n **[Instruction]**: Use the **Focus Year** slider to set the year. Click a dot or line to select a country, and the bottom-right will show the related countries to the selected country. \n\n Please **TRY YOUR BEST** to find the answers from the infographic.",
+      "type": "website",
+      "nextButtonLocation": "sidebar",
+      "path": "juicyvis-study-1/assets/juicyvis/index.html?chart=7&juicy=1",
+      "response": [
+        {
+          "id": "chart7_1_Q1",
+          "prompt": "Which country had the highest % of internet use in 2005?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "United States",
+            "Canada",
+            "United Kingdom",
+            "Denmark",
+            "Iceland"
+          ]
+        },
+        {
+          "id": "chart7_1_Q2",
+          "prompt": "Which country had the highest % of internet use in 2000?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Iceland",
+            "Denmark",
+            "Norway",
+            "Canada",
+            "United States"
+          ]
+        },
+        {
+          "id": "chart7_1_Q3",
+          "prompt": "What were the three top related countries to Iceland in 2009?",
+          "location": "sidebar",
+          "type": "dropdown",
+          "required": true,
+          "placeholder": "Select the answer",
+          "options": [
+            "Norway, Luxembourg, Denmark",
+            "Norway, Netherlands, Denmark",
+            "Norway, Sweden, Netherlands",
+            "Sweden, Netherlands, Denmark",
+            "Luxembourg, Denmark, United Kingdom"
+          ]
+        }
+      ],
+      "correctAnswer": [
+        {
+          "id": "chart7_1_Q1",
+          "answer": "Iceland"
+        },
+        {
+          "id": "chart7_1_Q2",
+          "answer": "Norway"
+        },
+        {
+          "id": "chart7_1_Q3",
+          "answer": "Norway, Sweden, Netherlands"
+        }
+      ],
+      "instructionLocation": "sidebar"
+    },
+    "Q_Chart1": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart1-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart1-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_Chart2": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart2-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart2-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_Chart3": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart3-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart3-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_Chart4": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart4-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart4-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_Chart5": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart5-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart5-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_Chart6": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart6-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart6-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_Chart7": {
+      "instruction": "Please complete the questions about your experiences with the infographic/chart you just played. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-chart7-1",
+          "prompt": "To what extent do you agree that this visual representation is...?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions": [
+            "Strongly Disagree",
+            "Disagree",
+            "Slightly disagree",
+            "Neutral",
+            "Slightly agree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "enjoyable",
+            "likable",
+            "pleasing",
+            "nice",
+            "appealing"
+          ]
+        },
+        {
+          "id": "q-chart7-2",
+          "prompt": "How did you feel while interacting with the infographic/chart just now?",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "required": true,
+          "withDivider": true,
+          "answerOptions":[
+            "Strongly Disagree",
+            "Disagree",
+            "Neither Agree nor Disagree",
+            "Agree",
+            "Strongly Agree"
+          ],
+          "questionOptions": [
+            "I lost myself in this experience",
+            "The time I spent using this infographic just slipped away",
+            "I was absorbed in this experience",
+            "I felt frustrated while using this infographic",
+            "I found this infographic confusing to use",
+            "Using this infographic was difficult",
+            "This infographic was attractive",
+            "This infographic was aesthetically appealing",
+            "This infographic appealed to my senses",
+            "Using this infographic was worthwhile",
+            "My experience was rewarding",
+            "I felt interested in this experience"
+          ]
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Q_all": {
+      "instruction": "**Final Questions**. You can proceed to the next page when finished.",
+      "nextButtonLocation": "sidebar",
+      "correctAnswer": [],
+      "response": [
+        {
+          "id": "q-all-1",
+          "prompt": "Considering the different infographic experiences you encountered in this study, if you had to choose a default style, which would you prefer?",
+          "location": "aboveStimulus",
+          "type": "radio",
+          "required": true,
+          "withDivider": true,
+          "options": [
+            "No juicy feedback/embellishments",
+            "Less juicy feedback/embellishments",
+            "Moderate juicy feedback/embellishments",
+            "More juicy feedback/embellishments"
+          ],
+          "withOther": true
+        },
+        {
+          "id": "q-all-2",
+          "prompt": "Reflecting on the various infographics you interacted with in this study, which infographic did you prefer overall, and why?",
+          "secondaryText": "For your memory, names of all infographics we have are: **[AI System]**, **[The Map]**, **[Energy]**, **[Foods]**, **[People]**, **[Income]**, **[Internet]**.",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "required": true,
+          "withDivider": true,
+          "placeholder": "Enter your response here"
+        },
+        {
+          "id": "q-all-3",
+          "prompt": "Overall, how's your preference for adding (or not adding) juicy feedback/embellishments to infographics/charts?",
+          "location": "aboveStimulus",
+          "type": "slider",
+          "startingValue": 5,
+          "required": true,
+          "withDivider": true,
+          "options": [
+            {
+              "label": "strongly prefer not adding juicy feedback/embellishments",
+              "value": 0
+            },
+            {
+              "label": "strongly prefer adding juicy feedback/embellishments",
+              "value": 10
+            }
+          ]
+        },
+        {
+          "id": "q-all-4",
+          "prompt": "Please explain why you made the selections/answers above, and how juicy feedback/embellishments influenced your experience.",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "required": true,
+          "withDivider": true,
+          "placeholder": "Enter your response here"
+        }
+      ],
+      "type": "questionnaire"
+    },
+    "Demographics Intro": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/demographics-intro.md",
+      "response": [],
+      "type": "markdown"
+    },
+    "Demographics Information": {
+      "correctAnswer": [],
+      "path": "juicyvis-study-1/assets/demographics.md",
+      "response": [
+        {
+          "id": "genderidentity",
+          "location": "belowStimulus",
+          "options": [
+            "Woman",
+            "Man",
+            "Non-binary / Genderqueer / Third gender",
+            "Genderfluid / Gender non-conforming",
+            "Agender",
+            "Transgender",
+            "Prefer not to say"
+          ],
+          "prompt": "What is your gender identity?",
+          "required": true,
+          "secondaryText": "You can select multiple options",
+          "type": "checkbox",
+          "withOther": true
+        },
+        {
+          "id": "education",
+          "location": "belowStimulus",
+          "options": [
+            "Less than high school degree",
+            "High school degree or equivalent (e.g., GED)",
+            "Some college but no degree",
+            "Associate degree / trade degree",
+            "Bachelor degree",
+            "Graduate degree (e.g., MA, MPhil, PhD, etc.)",
+            "Prefer not to say"
+          ],
+          "prompt": "What is the highest level of education you have completed or the highest degree you have received?",
+          "required": true,
+          "type": "radio"
+        },
+        {
+          "id": "age",
+          "location": "belowStimulus",
+          "placeholder": "Please provide your age number",
+          "prompt": "What is your age?",
+          "secondaryText": "You can write N/A if you prefer.",
+          "required": true,
+          "type": "shortText"
+        }
+      ],
+      "type": "markdown"
+    }
+  },
+  "sequence": {
+    "components": [
+      "introduction",
+      "Consent Form",
+      {
+        "components": [
+          "Attention Check A",
+          "Disqualification_a"
+        ],
+        "order": "fixed",
+        "skip": [
+          {
+            "name": "Attention Check A",
+            "check": "response",
+            "responseId": "attentionchecka",
+            "value": "Disagree",
+            "comparison": "equal",
+            "to": "Audio Speaker Test"
+          }
+        ]
+      },
+      {
+        "components": [
+          "Audio Speaker Test",
+          "Disqualification_b"
+        ],
+        "order": "fixed",
+        "skip": [
+          {
+            "name": "Audio Speaker Test",
+            "check": "response",
+            "responseId": "quiz2",
+            "value": "3179",
+            "comparison": "equal",
+            "to": "Color Blindness Test"
+          }
+        ]
+      },
+      {
+        "components": [
+          "Color Blindness Test",
+          "Disqualification_c"
+        ],
+        "order": "fixed",
+        "skip": [
+          {
+            "name": "Color Blindness Test",
+            "check": "response",
+            "responseId": "colorblindness-test",
+            "value": 45,
+            "comparison": "equal",
+            "to": "JuicyCharts Intro"
+          }
+        ]
+      },
+      "JuicyCharts Intro",
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_1_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_1_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart1"
+                }
+              ]
+              },
+              "Q_Chart1"
+            ],
+            "order": "fixed"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_2_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_2_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart2"
+                }
+              ]
+              },
+              "Q_Chart2"
+            ],
+            "order": "fixed"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_3_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_3_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart3"
+                }
+              ]
+              },
+              "Q_Chart3"
+            ],
+            "order": "fixed"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_4_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_4_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart4"
+                }
+              ]
+              },
+              "Q_Chart4"
+            ],
+            "order": "fixed"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_5_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_5_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart5"
+                }
+              ]
+              },
+              "Q_Chart5"
+            ],
+            "order": "fixed"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_6_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_6_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart6"
+                }
+              ]
+              },
+              "Q_Chart6"
+            ],
+            "order": "fixed"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "components": [
+                      "JuicyChart_7_0",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  },
+                  {
+                    "components": [
+                      "JuicyChart_7_1",
+                      "JuicyChart_end"
+                    ],
+                    "order": "fixed"
+                  }
+                ],
+              "order": "latinSquare",
+              "skip": [
+                {
+                  "name": "JuicyChart_end",
+                  "check": "response",
+                  "responseId": "juicychart_end",
+                  "value": "Yes",
+                  "comparison": "equal",
+                  "to": "Q_Chart7"
+                }
+              ]
+              },
+              "Q_Chart7"
+            ],
+            "order": "fixed"
+          }
+        ],
+        "order": "latinSquare"
+      },
+      "Q_all",
+      "Demographics Intro",
+      "Demographics Information"
+    ],
+    "order": "fixed"
+  },
+  "studyMetadata": {
+    "authors": [
+      "Shano Liang, Max Chen, Lane Harrison"
+    ],
+    "date": "2026-03-05",
+    "description": "",
+    "organizations": [
+      "VIEW Lab, WPI"
+    ],
+    "title": "Juicy VIS study 1: Juicy Feedback/Embellishment on infographics",
+    "version": "1.0"
+  },
+  "uiConfig": {
+    "contactEmail": "sliang1@wpi.edu",
+    "helpTextPath": "juicyvis-study-1/assets/help.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "timeoutReject": true,
+    "nextOnEnter": true,
+    "sidebar": true,
+    "sidebarWidth": 400,
+    "studyEndMsg": "**Thank you for completing the study. You may click this link and return to Prolific**: [https://app.prolific.com/submissions/complete?cc=C10PIQT8](https://app.prolific.com/submissions/complete?cc=C10PIQT8)",
+    "withProgressBar": false,
+    "urlParticipantIdParam": "PROLIFIC_PID",
+    "participantNameField": "introduction.prolificId",
+    "autoDownloadStudy": false,
+    "autoDownloadTime": 5000
+  }
+}
