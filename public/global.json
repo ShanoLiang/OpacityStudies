@@ -1,8 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.1.1/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "juicyvis-study-1",
-    "juicyvis-study-2",
+    "opacity-jnd-single",
     "tutorial",
     "example-brush-interactions",
     "example-cleveland",
@@ -37,11 +36,8 @@
     "test-step-logic"
   ],
   "configs": {
-    "juicyvis-study-1": {
-      "path": "juicyvis-study-1/config.json"
-    },
-    "juicyvis-study-2": {
-      "path": "juicyvis-study-2/config.json"
+    "opacity-jnd-single": {
+      "path": "opacity-jnd-single/config.json"
     },
     "tutorial": {
       "path": "tutorial/config.json"
