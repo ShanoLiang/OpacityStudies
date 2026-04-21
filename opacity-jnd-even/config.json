@@ -219348,15 +219348,15 @@
   },
   "studyMetadata": {
     "authors": [
-      "Shano Liang"
+      "Shano Liang, Caterina Ponti, Alark Joshi, Lane Harrison"
     ],
-    "date": "2026-03-24",
+    "date": "2026-04-21",
     "description": "",
     "organizations": [
       "VIS Lab"
     ],
     "title": "Opacity Judgment Study (Even)",
-    "version": "4.0"
+    "version": "4.1"
   },
   "uiConfig": {
     "contactEmail": "sliang1@wpi.edu",
